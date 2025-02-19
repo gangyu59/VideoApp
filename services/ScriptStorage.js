@@ -9,7 +9,11 @@ function saveScript(script) {
 function loadScript() {
     const savedScript = localStorage.getItem('generatedScript');
     if (savedScript) {
-        return savedScript;
+        document.getElementById('generated-script').innerHTML = savedScript;
     }
-    return '';  // 如果没有剧本，返回空字符串
 }
+
+// 页面加载时加载已保存的剧本
+document.addEventListener('DOMContentLoaded', function() {
+    loadScript();
+});
