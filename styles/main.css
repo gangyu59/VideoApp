@@ -1,1 +1,101 @@
+/* body 样式 */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  margin: 0;
+}
 
+/* container 样式 */
+.container {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框样式 */
+input {
+  padding: 8px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* 剧本内容容器样式 */
+#script-container {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  max-height: 70vh; /* 设置最大高度 */
+  overflow-y: auto; /* 允许滚动 */
+  padding: 10px;
+  border: 1px solid #ddd; /* 添加边框，使内容区域更明显 */
+  border-radius: 5px;
+}
+
+/* 标题样式 */
+strong {
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    margin-top: 20px;
+}
+
+/* 场景样式 */
+.scene {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+    display: block;
+    margin-top: 10px;
+}
+
+/* 角色台词样式 */
+.character {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+    display: block; /* 修改为 block 以确保台词换行 */
+}
+
+/* 添加换行符样式 */
+br {
+    display: block;
+    margin: 5px 0;
+}
+
+/* 按钮样式 */
+button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #007bff;  /* 设置按钮背景色 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 禁用按钮样式 */
+button:disabled {
+  background-color: grey;  /* 设置禁用状态下的按钮颜色 */
+  cursor: not-allowed;     /* 禁止点击 */
+}
+
+/* 按钮悬停效果 */
+button:hover {
+  opacity: 1;
+}
+
+/* 播放按钮 */
+button#toggle-speech-btn {
+  background-color: green; /* 初始为绿色 */
+}
+
+/* 停止按钮 */
+button#toggle-speech-btn:active {
+  background-color: red; /* 停止时为红色 */
+}
