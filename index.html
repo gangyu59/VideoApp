@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>短视频生成器</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>短视频剧本生成器</h1>
+    
+    <!-- 用户输入区域 -->
+    <input type="text" id="keyword" placeholder="输入关键词或选择主题">
+    <button id="generate-btn">生成剧本</button>
+    
+    <!-- 显示生成的剧本 -->
+    <div id="script-container">
+      <p id="generated-script"></p>
+    </div>
+    
+    <!-- 播放/停止按钮 -->
+    <button id="toggle-speech-btn" style="display: none;">播放语音</button>
+  </div>
+
+  <!-- 引入 JavaScript 文件 -->
+  <script src="services/GPTService.js"></script>
+  <script src="services/SpeechService.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
