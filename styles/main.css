@@ -16,13 +16,18 @@ body {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px; /* 限制最大宽度 */
 }
 
 /* 输入框样式 */
 input {
   padding: 8px;
-  width: 200px;
+  width: 100%;
+  max-width: 300px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 /* 剧本内容容器样式 */
@@ -35,6 +40,7 @@ input {
   padding: 10px;
   border: 1px solid #ddd; /* 添加边框，使内容区域更明显 */
   border-radius: 5px;
+  background-color: #fafafa; /* 设置背景颜色 */
 }
 
 /* 标题样式 */
@@ -52,6 +58,8 @@ strong {
     color: #007bff;
     display: block;
     margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 /* 角色台词样式 */
@@ -60,6 +68,8 @@ strong {
     color: #007bff;
     margin-top: 10px;
     display: block; /* 修改为 block 以确保台词换行 */
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
 }
 
 /* 添加换行符样式 */
@@ -77,6 +87,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 添加按钮的过渡效果 */
 }
 
 /* 禁用按钮样式 */
@@ -87,7 +98,8 @@ button:disabled {
 
 /* 按钮悬停效果 */
 button:hover {
-  opacity: 1;
+  opacity: 0.8;
+  transform: scale(1.05);  /* 鼠标悬停时略微放大按钮 */
 }
 
 /* 播放按钮 */
@@ -98,4 +110,52 @@ button#toggle-speech-btn {
 /* 停止按钮 */
 button#toggle-speech-btn:active {
   background-color: red; /* 停止时为红色 */
+}
+
+/* 滚动条样式（用于剧本内容区域） */
+#script-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#script-container::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+#script-container::-webkit-scrollbar-track {
+  background-color: #f4f4f9;
+}
+
+/* 动画容器样式 */
+#animation-container {
+  display: block;
+  margin-top: 20px;
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto; /* 允许垂直滚动 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f0f0; /* 添加背景色，确保可见 */
+}
+
+/* 动画关键帧 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 角色动画效果 */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
