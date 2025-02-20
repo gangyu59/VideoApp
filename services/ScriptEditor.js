@@ -26,5 +26,12 @@ function saveEditing() {
     const editBtn = document.getElementById('edit-btn');
     editBtn.textContent = '编辑';
     document.getElementById('generated-script').contentEditable = false; // 禁止继续编辑
+
+    // 更新播放按钮
+    const playButton = document.getElementById('toggle-speech-btn');
+    playButton.style.display = 'inline-block';
+    playButton.textContent = '播放语音';
+    playButton.style.backgroundColor = 'green'; // 初始为绿色
 }
+
 

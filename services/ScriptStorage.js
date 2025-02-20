@@ -9,7 +9,8 @@ function saveScript(script) {
 function loadScript() {
     const savedScript = localStorage.getItem('generatedScript');
     if (savedScript) {
-        document.getElementById('generated-script').innerHTML = savedScript;
+        // 格式化并显示保存的剧本
+        document.getElementById('generated-script').innerHTML = formatScript(savedScript);
     }
 }
 
