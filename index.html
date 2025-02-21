@@ -16,7 +16,7 @@
     <button id="edit-btn" style="display: none;">编辑</button> <!-- 编辑按钮 -->
 		
 		<!-- 显示加载指示器 -->
-    <div id="hourglass" style="display: none;">⏳</div> <!-- 显示 hourglass 加载指示器 -->
+		<div id="hourglass" style="display: none; font-size: 64px;">⏳</div> <!-- 显示 hourglass 加载指示器 -->
 				
     <!-- 显示生成的剧本 -->
     <div id="script-container">
@@ -31,9 +31,11 @@
   </div>
 
   <!-- 引入 JavaScript 文件 -->
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="services/GPTService.js"></script>
 	<script src="services/StyleService.js"></script>
   <script src="services/ScriptStorage.js"></script> <!-- 存储剧本模块 -->
+	<script src="services/SceneService.js"></script> <!-- 产生动画模块 -->
   <script src="services/ScriptEditor.js"></script> 
   <script src="services/SpeechService.js"></script>
 	<script src="services/AnimationService.js"></script> <!-- 引入动画服务 -->
