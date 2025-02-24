@@ -12,8 +12,11 @@
     
     <!-- 用户输入区域 -->
     <input type="text" id="keyword" placeholder="输入关键词或选择主题">
-    <button id="generate-btn">生成剧本</button>
-    <button id="edit-btn" style="display: none;">编辑</button> <!-- 编辑按钮 -->
+		
+		<div class="button-group">
+		    <button id="generate-btn">生成剧本</button>
+		    <button id="edit-btn" style="display: none;">编辑</button>
+		</div>
 		
 		<!-- 显示加载指示器 -->
 		<div id="hourglass" style="display: none; font-size: 64px;">⏳</div> <!-- 显示 hourglass 加载指示器 -->
@@ -24,7 +27,18 @@
     </div>
 		
 		<!-- 显示生成的动画 -->
-    <div id="animation-container"></div> <!-- 显示生成的动画 -->
+<div id="animation-container">
+    <div id="lottie-wrapper">
+        <lottie-player 
+            id="lottie-animation"
+            src="assets/cat.json" 
+            background="transparent" 
+            speed="1" 
+            style="width: 300px; height: 300px;" 
+            loop autoplay>
+        </lottie-player>
+    </div>
+</div>
     
     <!-- 播放/停止按钮 -->
     <button id="toggle-speech-btn" style="display: none;">播放语音</button>
